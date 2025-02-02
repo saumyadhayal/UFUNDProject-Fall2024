@@ -12,7 +12,7 @@
 - Displaying Box for adding new Items followed by Current items. Items can be clicked on to make changes.
 ![image](https://github.com/user-attachments/assets/a41e7742-4dd3-4167-b724-a953f4977687)
 
-# Cupboard diplay for Admin to make changes to Items displayed to users
+# Individual Items for making Changes
 ![image](https://github.com/user-attachments/assets/d7e73a23-3f4e-4570-9785-03206e260234)
 
 # Home Page for the Users
@@ -26,14 +26,15 @@
 # Cart for the Users:
 ![image](https://github.com/user-attachments/assets/36917624-306e-4aed-904f-6063f26a3e9a)
 
-# Checkout Page displaying all the items
+# Checkout Page
 ![image](https://github.com/user-attachments/assets/0ca533d2-8a8a-4b54-941c-ef84839439fd)
 
 # Card Details Required
 - The purchase button can't be accessed unless card details are filled
 ![image](https://github.com/user-attachments/assets/a64cd879-74f4-42cf-80cf-f14fcc7f19c9)
 
-# Leaderboard displaying the participants' donations
+# Leaderboard displaying
+- Also displays the donation made by the participants
 ![image](https://github.com/user-attachments/assets/bc990574-e653-42f9-883a-e16be6fbb267)
 
 
