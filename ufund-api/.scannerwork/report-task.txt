@@ -1,0 +1,6 @@
+projectKey=Heros
+serverUrl=http://localhost:9000
+serverVersion=10.7.0.96327
+dashboardUrl=http://localhost:9000/dashboard?id=Heros
+ceTaskId=afd4de1e-a6db-40fc-8630-632ece0c24fe
+ceTaskUrl=http://localhost:9000/api/ce/task?id=afd4de1e-a6db-40fc-8630-632ece0c24fe
