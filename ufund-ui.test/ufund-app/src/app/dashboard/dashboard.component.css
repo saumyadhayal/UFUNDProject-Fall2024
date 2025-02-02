@@ -1,0 +1,174 @@
+/* Header Section */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.header h1 {
+  margin: 0;
+}
+
+.header-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.header-buttons button {
+  margin: 0;
+}
+
+/* Centered Search Bar */
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+/* Remove underline and maintain color for all links */
+.need-box a,
+.header a,
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Container for Filters and Needs */
+.content-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+/* Filters Section */
+.filters {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.dropdown-container {
+  position: relative; /* Makes dropdown relative to this container */
+}
+
+.pricefilters button,
+.typefilters button {
+  position: relative; /* Reference for dropdown positioning */
+  transition: background-color 0.3s ease;
+}
+
+/* Needs Menu */
+.needs-menu {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  flex-grow: 1;
+}
+
+.need-box {
+  background-color: #3f525c;
+  border-radius: 4px;
+  padding: 2rem;
+  color: #fff;
+  text-align: center;
+  transition: background-color 0.3s ease; /* Smooth color transition */
+}
+
+.need-box:hover {
+  background-color: #2f3b41;
+}
+
+.need-box h3 {
+  font-size: x-large;
+  color: #ffffff;
+  margin: 0 0 0.5rem;
+}
+
+.need-box p {
+  margin: 0.25rem 0;
+}
+
+/* Dropdown Menu Styling */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 150px;
+  border: 1px solid #ddd;
+  background-color: white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  padding: 0.25rem 0;
+  padding: 0.25rem 0;
+  margin-top: 5px;
+}
+
+.dropdown-menu button {
+  border: none;
+  padding: 0.75rem 1rem;
+  background-color: #ededed;
+  text-align: center;
+  font-size: 1rem;
+  transition: background-color 0.3s ease; /* Smooth color transition */
+}
+
+.dropdown-menu button:active {
+  background-color: #cccccc; /* Color when button is clicked */
+}
+
+.dropdown-menu button.active {
+  background-color: #8c8c8c; /* Green when the button is selected */
+  color: white; /* Ensure the text is readable */
+}
+
+.dropdown-menu button:hover{
+  background-color: #858585;
+}
+
+.dropdown-menu button:focus {
+  outline: none;
+  background-color: black;
+}
+
+.filters button {
+  margin-bottom: 0.5rem;
+}
+
+/* Selected Filters Tags */
+.selected-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding-top: 1rem;
+}
+
+.filter-tag {
+  display: inline-flex;
+  align-items: center;
+  background-color: #e0e0e0;
+  color: #333;
+  padding: 0.3rem 0.5rem;
+  border-radius: 8px;
+  font-size: smaller;
+}
+
+.filter-tag button {
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 5px;
+  color: #333;
+  padding: 0; 
+  width: 16px; 
+  height: 16px;  
+  transition: background-color 0.3s ease;
+}
+
+.filter-tag button:hover {
+  background-color: #bcbcbc;
+}

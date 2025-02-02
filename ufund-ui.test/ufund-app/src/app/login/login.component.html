@@ -1,0 +1,17 @@
+
+<div class="login">
+  <h2>LOGIN</h2>
+
+  <label for="username-box">Username: </label>
+    <input #usernameBox id="username-box"/>
+  <br>
+  <label for="password-box">Password: </label>
+    <input #passwordBox type="password" id="password-box"/>
+  <br>
+  <button (click)="checkLogin(usernameBox.value, passwordBox.value)">
+    Log in
+  </button>
+  <span class="errorMessage" *ngIf="errorMessage">{{errorMessage}}</span>
+  <br>
+  <a routerLink="/signup">New customer? Sign up here.</a>
+</div>

@@ -1,0 +1,9 @@
+<h1> Leaderboard</h1>
+<div class="user-board">
+    <div *ngFor="let user of allUsers" class="user-box">
+      <p class="user-name">{{ user.name }}</p>
+      <p class="user-total">${{ user.totalSpent }}</p>
+    </div>
+  </div>
+  <button routerLink="/user-dashboard">Go Back</button>
+  

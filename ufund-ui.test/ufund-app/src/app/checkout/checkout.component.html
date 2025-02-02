@@ -1,0 +1,69 @@
+<button (click)="goBack()">Go back</button>
+
+<h2>Checkout</h2>
+<div *ngIf="user">
+  <h2>Items In Cart</h2>
+
+  <!-- Check for Error Message First -->
+  <div *ngIf="errorMessage; else checkCart">
+    <p>{{errorMessage}}</p>
+  </div>
+
+  <!-- Check if Cart has Items if there is no Error -->
+  <ng-template #checkCart>
+    <div *ngIf="user.cart && user.cart.length > 0; else emptyCart">
+      
+      <!-- Display Cart Items and Total -->
+      <div *ngFor="let candle of user.cart; let i = index">
+        <div>
+          <h3>{{candle.name}}</h3>
+          <p>Price: ${{candle.price}}</p>
+          <p>Quantity: {{candle.quantity}}</p>
+        </div>
+        <hr>
+      </div>
+      <p>Total: ${{getTotalPrice(user.cart) | number:'1.2-2'}}</p>
+
+      <!-- Card Details Section with Validation -->
+      <div>
+        <label for="card-number">Card number: </label>
+        <input id="card-number" #cardNumberInput="ngModel" [(ngModel)]="cardNumber" 
+               pattern="^[0-9]{16}$" required maxlength="16" minlength="16"/>
+        <div *ngIf="cardNumberInput.invalid && cardNumberInput.touched">
+          <small>Please enter a 16-digit card number.</small>
+        </div><br>
+
+        <label for="holder-name">Card Holder's Name: </label>
+        <input id="holder-name" #cardNameInput="ngModel" [(ngModel)]="cardName" required />
+        <div *ngIf="cardNameInput.invalid && cardNameInput.touched">
+          <small>Cardholder name is required.</small>
+        </div><br>
+
+        <label for="expiry-date">Expiry Date (MM/YY): </label>
+        <input id="expiry-date" #expiryDateInput="ngModel" [(ngModel)]="expirationDate" 
+               pattern="^(0[1-9]|1[0-2])\/\d{2}$" required placeholder="MM/YY"/>
+        <div *ngIf="expiryDateInput.invalid && expiryDateInput.touched">
+          <small>Please enter a valid expiry date in MM/YY format.</small>
+        </div><br>
+
+        <label for="sec-code">Security Code: </label>
+        <input id="sec-code" #cvcInput="ngModel" [(ngModel)]="cvc" 
+               pattern="^[0-9]{3}$" required maxlength="3" minlength="3"/>
+        <div *ngIf="cvcInput.invalid && cvcInput.touched">
+          <small>Please enter a 3-digit security code (CVC).</small>
+        </div><br>
+        
+        <!-- Purchase button enabled only if all fields are valid -->
+        <button (click)="onSubmit()" 
+                [disabled]="cardNumberInput.invalid || cardNameInput.invalid || expiryDateInput.invalid || cvcInput.invalid">
+          Purchase
+        </button>
+      </div>
+    </div>
+  </ng-template>
+
+  <!-- Empty Cart Message -->
+  <ng-template #emptyCart>
+    <p>{{user.name}}'s cart is empty. You can't proceed with an empty cart.</p>
+  </ng-template>
+</div>

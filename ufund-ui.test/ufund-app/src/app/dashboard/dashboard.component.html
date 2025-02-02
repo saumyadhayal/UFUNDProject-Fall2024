@@ -1,0 +1,57 @@
+
+
+
+<!-- Centered Search Component -->
+<div class="search-container">
+  <app-need-search></app-need-search>
+</div>
+
+<div class="content-container">
+  <!-- Filters Section on the Left -->
+  <div class="filters">
+    <!-- Price Filter Section -->
+    <div class="pricefilters dropdown-container">
+      <button (click)="toggleDropdownPrice()">Filter by Price</button>
+      <div *ngIf="PricedropdownOpen" class="dropdown-menu">
+        <button (click)="filterNeedsPrice(10)" [class.active]="activeFilterPrice === 10">Show $10 or less Needs</button>
+        <button (click)="filterNeedsPrice(20)" [class.active]="activeFilterPrice === 20">Show $20 or less Needs</button>
+        <button (click)="filterNeedsPrice(50)" [class.active]="activeFilterPrice === 50">Show $50 or less Needs</button>
+        <button (click)="filterNeedsPrice(100)" [class.active]="activeFilterPrice === 100">Show $100 or less Needs</button>
+        <button (click)="filterNeedsPrice(250)" [class.active]="activeFilterPrice === 250">Show $250 or less Needs</button>
+        <button (click)="clearFilterPrice()">Clear Price Filters</button>
+      </div>
+    </div>
+
+    <!-- Type Filter Section -->
+    <div class="typefilters dropdown-container">
+      <button (click)="toggleDropdownType()">Filter by Type</button>
+      <div *ngIf="TypedropdownOpen" class="dropdown-menu">
+        <button *ngFor="let type of uniqueTypes" (click)="filterNeedsType(type)" [class.active]="activeFilterType === type">{{ type }}</button>
+        <button (click)="clearFilterType()">Clear Type Filters</button>
+      </div>
+    </div>
+
+    <button (click)="clearAllFilters()">Clear filters</button>
+
+    <!-- Selected Filters Box -->
+    <div *ngIf="activeFilterType || activeFilterPrice" class="selected-filters">
+      <span *ngIf="activeFilterType" class="filter-tag">
+        {{ activeFilterType }} <button (click)="clearFilterType()">x</button>
+      </span>
+      <span *ngIf="activeFilterPrice !== null" class="filter-tag">
+        ${{ activeFilterPrice }} or less <button (click)="clearFilterPrice()">x</button>
+      </span>
+    </div>
+  </div>
+
+  <!-- Needs Display Section on the Right -->
+  <div class="needs-menu">
+    <a *ngFor="let need of combinedFilteredNeeds" routerLink="/detail/{{need.id}}">
+      <div class="need-box">
+        <h3>{{ need.name }}</h3>
+        <p>{{ need.type }}</p> <p>${{ need.price }}</p>
+      </div>
+    </a>
+  </div>
+</div>
+

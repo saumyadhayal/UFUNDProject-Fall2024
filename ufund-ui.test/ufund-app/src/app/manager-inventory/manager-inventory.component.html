@@ -1,0 +1,29 @@
+<div *ngIf="need">
+    <!-- <h2>Product:</h2> -->
+    
+    <div>
+        <h2>Current Name: {{need.name}}</h2>
+        <label for="new-need-name">Enter New Name: </label>
+        <input id="new-need-name" #needName />
+        <button type="button" class="add-button" (click)="editName(needName.value); needName.value=''">Update Name</button>
+    </div>
+    <div>
+        <h2>Current Price: {{need.price}}</h2>
+        <label for="new-need-price">Enter New Price: </label>
+        <input id="new-need-price" type="number" #needPrice />
+        <button type="button" class="add-button" (click)="editPrice(needPrice.valueAsNumber); needPrice.value=''">Update Price</button>
+    </div>
+    <div>
+        <h2>Current Quantity: {{need.quantity}}</h2>
+        <label for="new-need-quantity">Enter New Quantity: </label>
+        <input id="new-need-quantity" type="number" #needQuantity />
+        <button type="button" class="add-button" (click)="editQuantity(needQuantity.valueAsNumber); needQuantity.value=''">Update Quantity</button>
+    </div>
+    <div>
+        <h2>Current Type: {{need.type}}</h2>
+        <label for="new-need-type">Enter New Type: </label>
+        <input id="new-need-type" type="string" #needType  />
+        <button type="button" class="add-button" (click)="editQuantity(needQuantity.valueAsNumber); needQuantity.value=''">Update Type</button>
+    </div>
+    <button type="button" (click)="goBack()">go back</button>
+</div>

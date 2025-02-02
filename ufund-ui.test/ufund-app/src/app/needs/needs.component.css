@@ -1,0 +1,89 @@
+/* NeedsComponent's private CSS styles */
+.needs {
+    margin: 0 0 2em 0;
+    list-style-type: none;
+    padding: 0;
+    width: 100%; /* Adjusted for better responsiveness */
+  }
+  
+  input {
+    display: block;
+    width: 100%;
+    padding: .5rem;
+    margin: 1rem 0;
+    box-sizing: border-box;
+  }
+  
+  .needs li {
+    position: relative;
+    cursor: pointer;
+    padding: 1rem;
+    border-bottom: 1px solid #ddd; /* Adding separation between needs */
+  }
+  
+  .needs li:hover {
+    background-color: #f0f0f0; /* Highlight on hover */
+  }
+  
+  .needs a {
+    color: #333;
+    text-decoration: none;
+    display: flex; /* Flexbox for better alignment */
+    justify-content: space-between; /* Space out text and badge */
+    padding: .5rem 0;
+  }
+  
+  .needs a:hover {
+    color: #2c3a41;
+    background-color: #e6e6e6;
+  }
+  
+  .needs a:active {
+    background-color: #525252;
+    color: #fafafa;
+  }
+  
+  .needs .badge {
+    display: inline-block;
+    font-size: small;
+    color: white;
+    padding: 0.8em 0.7em;
+    background-color: #405061;
+    line-height: 1em;
+    margin-right: .8em;
+    border-radius: 4px;
+  }
+  
+  .add-button {
+    padding: .5rem 1.5rem;
+    font-size: 1rem;
+    margin-top: 1rem; /* Adjusted margin */
+    background-color: #3f525c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .add-button:hover {
+    background-color: #42545C;
+  }
+  
+  button.delete {
+    position: absolute;
+    right: 10px; /* Positioning delete button */
+    top: 10px;
+    background-color: white;
+    color: #525252;
+    font-size: 1.1rem;
+    margin: 0;
+    padding: 3px 8px;
+    border: none;
+    border-radius: 4px; /* Rounded corners */
+  }
+  
+  button.delete:hover {
+    background-color: #525252;
+    color: white;
+  }
+  

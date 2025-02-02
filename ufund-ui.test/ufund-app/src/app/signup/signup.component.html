@@ -1,0 +1,23 @@
+<h2>SIGN UP</h2>
+<br>
+<label for="username-box">Username: </label>
+  <input #usernameBox id="username-box" value="{{providedUsername}}"/>
+<br>
+<label for="password-box">Password: </label>
+  <input #passwordBox  id="password-box">
+<br>
+<!--<label for="admin-checkbox">
+  <input #adminCheckbox type="checkbox" id="admin-checkbox"/> Are you an admin?
+</label>-->
+<br>
+<ul class="errorMessage">
+</ul>
+<button (click) = "checkSignup(usernameBox.value, passwordBox.value, false)">
+  Create account
+</button>
+<span *ngIf="errorMessage" class="errorMessage">{{errorMessage}}</span>
+<br>
+<button routerLink="/login">
+    Back to login
+</button>
+<br>

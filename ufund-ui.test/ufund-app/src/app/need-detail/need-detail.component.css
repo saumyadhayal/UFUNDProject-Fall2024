@@ -1,0 +1,42 @@
+/* NeedsDetailComponent's private CSS styles */
+
+  .productDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #3d3d3d;
+    border-radius: 4px;
+    background-color: rgb(255, 255, 255);
+    padding: 2rem; 
+    width: 500px; 
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    margin: 1rem auto; 
+  }
+  button {
+    margin-top: 20px;
+    margin-right: .5rem;
+    padding: 1rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer; /* Change cursor on hover */
+  }
+  
+  button:hover {
+    background-color: #2f3b41;
+  }
+  
+  button:disabled {
+    color: #ccc;
+    cursor: not-allowed; /* Change cursor for disabled button */
+  }
+  
+  h2 {
+    font-size: xx-large;
+    margin-bottom: 1rem; /* Space below the heading */
+  }
+
+  h3 {
+    padding: .05rem;
+
+  }
+  

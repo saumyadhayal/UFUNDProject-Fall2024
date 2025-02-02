@@ -1,0 +1,50 @@
+/* NeedSearch private styles */
+
+#search-component {
+    margin: 1rem 0; /* Space around the search component */
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+  }
+  
+  input {
+    padding: .5rem;
+    width: 100%;
+    max-width: 600px; /* Limit the width for larger screens */
+    box-sizing: border-box;
+    display: block;
+  }
+  
+  input:focus {
+    outline: #336699 auto 1px; /* Outline style for focused input */
+  }
+  
+  ul.search-result {
+    margin-top: 0; /* No margin at the top */
+    padding-left: 0; /* No padding on the left */
+    list-style-type: none; /* Remove default list styling */
+  }
+  
+  .search-result li {
+    margin-bottom: .5rem; /* Space between list items */
+  }
+  
+  .search-result li a {
+    border: 1px solid gray; /* Gray border around links */
+    display: block; /* Full width clickable area */
+    padding: .5rem; /* Padding inside the link */
+    box-sizing: border-box;
+    text-decoration: none; /* Remove underline from links */
+    color: black; /* Default text color */
+  }
+  
+  .search-result li a:hover {
+    background-color: #435A60; /* Background color on hover */
+    color: white; /* Text color on hover */
+  }
+  
