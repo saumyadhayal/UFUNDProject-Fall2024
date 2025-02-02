@@ -8,13 +8,16 @@
 # Login Page
 ![image](https://github.com/user-attachments/assets/0a8d3286-a54a-4c71-9653-fb9ad4b44a5a)
 
-# Home Page for Admin: Box for adding new Items followed by Current items
+# Home Page for Admin
+- Displaying Box for adding new Items followed by Current items. Items can be clicked on to make changes.
 ![image](https://github.com/user-attachments/assets/a41e7742-4dd3-4167-b724-a953f4977687)
 
 # Cupboard diplay for Admin to make changes to Items displayed to users
 ![image](https://github.com/user-attachments/assets/d7e73a23-3f4e-4570-9785-03206e260234)
 
 # Home Page for the Users
+- Contains a Search box to search for Items
+- Filters can be used to look for specific needs
 ![image](https://github.com/user-attachments/assets/6893723a-6c3d-42bc-94ae-174ca63a22fe)
 
 # Product Details Page
@@ -26,7 +29,8 @@
 # Checkout Page displaying all the items
 ![image](https://github.com/user-attachments/assets/0ca533d2-8a8a-4b54-941c-ef84839439fd)
 
-# Card required to proceed with the checkout
+# Card Details Required
+- The purchase button can't be accessed unless card details are filled
 ![image](https://github.com/user-attachments/assets/a64cd879-74f4-42cf-80cf-f14fcc7f19c9)
 
 # Leaderboard displaying the participants' donations
