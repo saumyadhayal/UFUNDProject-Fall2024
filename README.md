@@ -1,77 +1,35 @@
-# U-Fund:  _____ _replace with your particular fundraising type_ _____
-# Modify this document to expand any and all sections that are applicable for a better understanding from your users/testers/collaborators (remove this comment and other instructions areas for your FINAL release)
-
-An online U-Fund system built in Java 17=> and ___ _replace with other platform requirements_ ___
-  
-## Team
+## Team Members
 
 - Ryan J Miner
 - Vivian Hernandez
 - Saumya Dhayal
 - Fariha Khan
 
+# Login Page
+![image](https://github.com/user-attachments/assets/0a8d3286-a54a-4c71-9653-fb9ad4b44a5a)
 
-## Prerequisites
+# Home Page for Admin: Box for adding new Items followed by Current items
+![image](https://github.com/user-attachments/assets/a41e7742-4dd3-4167-b724-a953f4977687)
 
-- Java 11=>17 (Make sure to have correct JAVA_HOME setup in your environment)
-- Maven
--  _add any other tech stack requirements_
+# Cupboard diplay for Admin to make changes to Items displayed to users
+![image](https://github.com/user-attachments/assets/d7e73a23-3f4e-4570-9785-03206e260234)
 
+# Home Page for the Users
+![image](https://github.com/user-attachments/assets/6893723a-6c3d-42bc-94ae-174ca63a22fe)
 
-## How to run it
+# Product Details Page
+![image](https://github.com/user-attachments/assets/67f05024-25cd-45f5-bbae-7a4091bca7c5)
 
-1. Clone the repository and go to the root directory.
-2. Execute `mvn compile exec:java`
-3. Open in your browser `http://localhost:8080/`
-4.  _add any other steps required or examples of how to use/run_
+# Cart for the Users:
+![image](https://github.com/user-attachments/assets/36917624-306e-4aed-904f-6063f26a3e9a)
 
-## Known bugs and disclaimers
-(It may be the case that your implementation is not perfect.)
+# Checkout Page displaying all the items
+![image](https://github.com/user-attachments/assets/0ca533d2-8a8a-4b54-941c-ef84839439fd)
 
-Document any known bug or nuisance.
-If any shortcomings, make clear what these are and where they are located.
+# Card required to proceed with the checkout
+![image](https://github.com/user-attachments/assets/a64cd879-74f4-42cf-80cf-f14fcc7f19c9)
 
-## How to test it
-
-The Maven build script provides hooks for run unit tests and generate code coverage
-reports in HTML.
-
-To run tests on all tiers together do this:
-
-1. Execute `mvn clean test jacoco:report`
-2. Open in your browser the file at `PROJECT_API_HOME/target/site/jacoco/index.html`
-
-To run tests on a single tier do this:
-
-1. Execute `mvn clean test-compile surefire:test@tier jacoco:report@tier` where `tier` is one of `controller`, `model`, `persistence`
-2. Open in your browser the file at `PROJECT_API_HOME/target/site/jacoco/{controller, model, persistence}/index.html`
-
-To run tests on all the tiers in isolation do this:
-
-1. Execute `mvn exec:exec@tests-and-coverage`
-2. To view the Controller tier tests open in your browser the file at `PROJECT_API_HOME/target/site/jacoco/model/index.html`
-3. To view the Model tier tests open in your browser the file at `PROJECT_API_HOME/target/site/jacoco/model/index.html`
-4. To view the Persistence tier tests open in your browser the file at `PROJECT_API_HOME/target/site/jacoco/model/index.html`
-
-*(Consider using `mvn clean verify` to attest you have reached the target threshold for coverage)
-  
-  
-## How to generate the Design documentation PDF
-
-1. Access the `PROJECT_DOCS_HOME/` directory
-2. Execute `mvn exec:exec@docs`
-3. The generated PDF will be in `PROJECT_DOCS_HOME/` directory
+# Leaderboard displaying the participants' donations
+![image](https://github.com/user-attachments/assets/bc990574-e653-42f9-883a-e16be6fbb267)
 
 
-## How to setup/run/test program 
-1. Tester, first obtain the Acceptance Test plan
-2. IP address of target machine running the app
-3. Execute ________
-4. ...
-5. ...
-
-## License
-
-MIT License
-
-See LICENSE for details.
