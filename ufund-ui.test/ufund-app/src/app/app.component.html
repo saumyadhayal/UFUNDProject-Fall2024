@@ -1,0 +1,20 @@
+<div class="header">
+  <h1>Toys for Tots</h1>
+  <div class="header-buttons">
+    <button *ngIf="showleaderboardButton" (click)="Leaderboard()">Leaderboard</button>
+    <button *ngIf="showveiwcartButton" (click)="Viewcart()">View Cart</button>
+    <button *ngIf="showLogoutButton" (click)="logout()">Log Out</button>
+  </div>
+</div>
+
+<!-- Show login component if not authenticated -->
+<!-- <app-login *ngIf="!authService.isUserAuthenticated()"></app-login> -->
+
+<!-- Only show navigation and logout if the user is authenticated -->
+<nav *ngIf="authService.isUserAuthenticated()">
+  <!-- Navigation links -->
+  <button (click)="logout()">Logout</button> <!-- Logout button -->
+</nav>
+
+<router-outlet></router-outlet>
+<!-- <app-messages></app-messages> -->

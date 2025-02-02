@@ -1,0 +1,22 @@
+/* Header Section */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.header h1 {
+  margin: 0;
+}
+
+.header-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.header-buttons button {
+  margin: 0;
+}
+
+  
