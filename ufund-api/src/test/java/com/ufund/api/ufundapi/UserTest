@@ -1,0 +1,33 @@
+package com.ufund.api.ufundapi;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Test;
+
+import com.ufund.api.ufundapi.model.User;
+
+@Tag("Model")
+public class UserTest {
+    @Test
+    public void testConstructor() {
+        User expected = new User(1, "Aaron", Need[], False, "pass@123");
+        assertTrue(expected instanceof User);
+    }
+    @Test
+    public void testGetID() {
+        User user1 = new User(1, "Aaron", Need[], False, "pass@123");
+        int actual = user1.getID();
+
+        assertEquals(1, actual);
+    }
+    @Test
+    public void testGetName() {
+        User user1 = new User(1, "Aaron", Need[], False, "pass@123");
+        int actual = user1.getName();
+
+        assertEquals("Aaron", actual);
+    }
+
+}
